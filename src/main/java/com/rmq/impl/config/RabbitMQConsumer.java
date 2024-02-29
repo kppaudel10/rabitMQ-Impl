@@ -12,8 +12,6 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class RabbitMQConsumer {
 
-    private final RabbitMQConsumer rabbitMQConsumer;
-
     @RabbitListener(queues = "message-queue")
     public void receiveMessage(String message) {
         System.out.println("received message: " + message);
